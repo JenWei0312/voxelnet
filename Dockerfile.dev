@@ -20,4 +20,4 @@ COPY ./src /code
 
 # Init
 RUN python3 setup.py build_ext --inplace
-RUN dvc pull
+
