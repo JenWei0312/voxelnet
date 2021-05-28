@@ -20,8 +20,4 @@ COPY ./src /code
 
 # Init
 RUN python3 setup.py build_ext --inplace
-RUN git init 
-RUN dvc init
-
-RUN dvc import https://github.com/JenWei0312/kitti.git data/train
-#RUN dvc import https://github.com/iterative/dataset-registry get-started/data.xml 
+RUN dvc pull
