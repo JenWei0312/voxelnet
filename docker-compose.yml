@@ -7,6 +7,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+      args:
+        gdrive_client_id: ${gdrive_client_id} # from .env
+        gdrive_client_secret: ${gdrive_client_secret} #from .env
+
     volumes:
       - ${LOCAL_DATA_PATH}:/data
     ports:
