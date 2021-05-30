@@ -8,3 +8,5 @@ easydict
 matplotlib
 # Adding  dvc
 dvc
+# Adding gdrive
+dvc[gdrive]
