@@ -18,9 +18,13 @@ RUN pip3 install -r requirements.txt
 # Copy code
 COPY ./src /code
 
+ADD . /app
+#VOLUME /voldata
+WORKDIR /app
+
 # Download data
-RUN dvc remote modify myremote gdrive_client_id ${CLIENT_ID}
-RUN dvc remote modify myremote gdrive_client_secret ${CLIENT_SECRET}
+RUN dvc remote modify myremote gdrive_client_id '${CLIENT_ID}'
+RUN dvc remote modify myremote gdrive_client_secret '${CLIENT_SECRET}'
 RUN dvc pull
 
 # Init
