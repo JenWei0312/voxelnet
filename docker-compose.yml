@@ -8,8 +8,8 @@ services:
       context: .
       dockerfile: Dockerfile.dev
       args:
-        gdrive_client_id: ${CLIENT_ID} # from .env
-        gdrive_client_secret: ${CLIENT_SECRET} #from .env
+        CLIENT_ID: ${CLIENT_ID} # from .env
+        CLIENT_SECRET: ${CLIENT_SECRET} #from .env
 
     volumes:
       - ${LOCAL_DATA_PATH}:/data
